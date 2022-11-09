@@ -1,10 +1,10 @@
 # Ivas Regex Tutorial
 
-Use this tutorial to help you search for information in your code!
+Use this tutorial to help you learn about Regex and help you search for information in your code!
 
 ## Summary
 
-A regular expression is a sequence of characters that defines a search pattern in a search pattern for text.
+Regex will help you search for chracters and values in your code.
 
 ## Table of Contents
 
@@ -16,7 +16,6 @@ A regular expression is a sequence of characters that defines a search pattern i
 - [The OR Operator](#the-or-operator)
 - [Flags](#flags)
 - [Character Escapes](#character-escapes)
-- [Grouping Constructs](#grouping-constructs)
 
 ## Regex Components
 
@@ -41,7 +40,7 @@ Bracket Expressions represent a range of characters we want to match. This range
 
 Now what are we looking for inside these brackets? Quantifiers set limits on the string that your regex matches. Quantifiers will match as many instances of certain patterns as possible.
 
-- - Matches the pattern 0 or more times
+    *- Matches the pattern 0 or more times
     +- Matches the pattern 1 or more times
     ?- Matches the pattern 0 or 1 times
     {}- Provide 3 different ways to set limits:
@@ -54,15 +53,38 @@ Add ? to the end and it will match as many instances as possible
 
 ### Character Classes
 
+In regex character classes define a set of characters in that are in an input string to find a match. Bracket expressions are an example of a character class.
+Here are some examples:
+
+\d - Matches any difit this class is the bracket expression [0-9]
+\w - Matches any alphanumeric character from the latin alphabet this class is equivelent to the bracket expression [A-Za-Z0-9_]
+
 ### The OR Operator
+
+The OR operator (|)
+
+The OR Operator allows us to search for logic outside of a bracket expression or within the grouping of a contruct or different constructs.
+
+For example [abc] if written as (a|b|c)
+We take the original expression (abc):(xyz)
+Then use the OR operator (a|b|c):(x|y|z)
+
+This will return matching strings "abc:xyz" and "acb:xyz" as well as "a:z"
+but "xyz:abc" would not.
 
 ### Flags
 
+Regex must be wrapped in slash characters. The exeption to this rule is a component known as flags. They are placed at the end of a regec after the second slash for added functionality and or limits.
+
+For example:
+
+g- Global search: the regex tests all possible matches in a string
+i- Case insensitive search: will ignore case to find matches
+m- Multi-line search: a mutli-line input string will be treated as multiple lines
+
 ### Character Escapes
 
-### Grouping Constructs
-
-### Bracket Expressions
+By adding a back slash with a curly brace (/{) tells regex to look for the open curly brace character insead of the beginning to define the quantifier. This is important when we are looking for strings with the same components of a regex.
 
 ## Author
 

@@ -8,4 +8,4 @@ This tutorial will explain Regex. You can go through the table of contents and u
 
 ### The following image shows the tutorial's appearance and functionality:
 
-![Read me pic](REGEXTUTORIAL.png 'Read me pic')
+![Read me pic](README.png 'Read me pic')
